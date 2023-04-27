@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .blok li {
+  list-style: none;
+}
+header .blok li a {
+  text-decoration: none;
+  color: chocolate;
+  font-size: 80px;
+  font-family: "Anton", sans-serif;
+}
+header .but ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .but ul li {
+  list-style: none;
+  position: relative;
+  padding: 8px;
+  transition: 1s;
+}
+header .but ul li .bi bi-x-lg{
+  font-size: 30px;
+  color: #fff;
+  display: none;
+}
+header .but ul li::before{
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: brown;
+  content: '';
+  bottom: 0;
+  transition: .4s
+}
+header .but ul li.active::before{
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: brown;
+  content: '';
+  bottom: 0;
+  transition: .4s
+}
+header .but ul .bi-list{
+  color: aliceblue;
+  display: none;
+}
+header .but ul li:hover::before{
+ 
+  width: 100%;
+}
+header .but ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(169, 115, 193);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://repository-images.githubusercontent.com/390143401/a00d7741-0b7c-4d3a-9c5b-3353f8a0f20c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+section form {
+  width: 20%;
+  height: 60vh;
+  background-color: rgb(97, 5, 245);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+section form input {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(238, 0, 255);
+}
+section form button {
+  padding: 20px 0;
+  width: 200px;
+  border-radius: 25px;
+  background-color: red;
+  border: none;
+}
+.home {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: burlywood;
+  padding: 100px 0;
+}
+
+.home nav a {
+  font-size: 60px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: coral;
+  position: relative;
+  margin-bottom: 50px;
+}
+.home nav a::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: rgb(129, 25, 232);
+  position: absolute;
+  bottom: 50%;
+  left: 250px;
+}
+
+.home nav a::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: rgb(129, 25, 232);
+  position: absolute;
+  top: 50%;
+  right: 250px;
+}
+.home nav{
+  text-align: center;
+}
+.home .circle{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home .circle .homs{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  padding: 20px 200px;
+  border-radius: 15px;
+  background-color: darkseagreen;
+}
+
+.home .circle .homs button{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 15px;
+  border: none;
+  background-color:cadetblue ;
+}
+.home .circle .homs img{
+  border-radius: 15px;
+}
+.car{
+  width: 100%;
+  align-items: center;
+  background-color: cornsilk;
+}
+
+.car .deg{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: cornsilk;
+}
+.car .deg a{
+text-decoration: none;
+font-size: 60px;
+color: coral;
+position: relative;
+}
+.car .deg a::after{
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: blue;
+  position: absolute;
+  bottom: 50%;
+  margin-left: 20px;
+}
+.car .deg a::before{
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: blue;
+  position: absolute;
+  bottom: 50%;
+  margin-left:-400px;
+}
+select{
+  width: 210px;
+  padding: 20px;
+  background-color: gold;
+  border-radius: 15px;
+}
+select option{
+  padding: 10px;
+}
+@media(max-width:1709px) {
+  header .but ul li a {
+    font-size: 20px;
+  }
+  header .but ul{
+    gap: 15px;
+  }
+  header .blok li a{
+    font-size: 40px;
+  }
+}
+
+@media(max-width:1365px){
+   .but ul .bi-list{
+    display: block;
+    font-size: 30px;
+    
+  }
+   .but ul .bi-x-lg{
+    display: block;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    }
+ .but  {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: darkorange;
+    display: none;
+    gap: 0;
+    padding: 0;
+  }
+ .but ul{
+    width: 40%;
+    height: 100%;
+    background-color: blueviolet;
+    flex-direction: column;
+    position: relative;
+  }
+  .but ul li a{
+    color: #fff;
+  }
+  header .blok ul li a{
+    color: black;
+  }
+}
+/* @media(max-width:1365px){
+  .home nav a{
+    font-size: 30px;
+  }
+  .home nav a::after{
+    visibility: hidden;
+  }
+  .home nav a::before{
+    visibility: hidden;
+  } 
+  .home .circle{ 
+   flex-direction: column;
+   
+  }
+  .home .circle .homs{
+    margin-top: 10px;
+  }
+} */
